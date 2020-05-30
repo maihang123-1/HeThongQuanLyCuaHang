@@ -37,9 +37,6 @@
             this.combSanPham = new System.Windows.Forms.ComboBox();
             this.btThoat = new System.Windows.Forms.Button();
             this.txtThanhToan = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,37 +135,6 @@
             this.txtThanhToan.TabIndex = 5;
             this.txtThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(439, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 41);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thống kê ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(439, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 44);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Thêm ";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(439, 226);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 40);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Chỉnh sửa";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 112);
@@ -182,9 +148,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(30, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Ngày";
+            this.label1.Text = "Ngày bán";
             // 
             // label2
             // 
@@ -192,9 +158,8 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(193, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 12;
-            this.label2.Text = "BÁN HÀNG";
             // 
             // Form3
             // 
@@ -204,9 +169,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.combSanPham);
             this.Controls.Add(this.txtThanhToan);
@@ -219,6 +181,7 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,9 +197,6 @@
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.ComboBox combSanPham;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtThanhToan;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;

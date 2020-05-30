@@ -23,42 +23,38 @@ namespace WindowsFormsApp1
                 this.Close();
 
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ShowMessagebox();
-        }
+        
 
-        private void btThanhToan_Click(object sender, EventArgs e)
-        {
-            //int Gia;
-            //int SoLuong;
-            //int ThanhToan;
-            //Gia = Convert.ToInt16(txtGia.Text);
-            //SoLuong = Convert.ToInt16(txtSoLuong.Text);
-            //ThanhToan = Convert.ToInt16(txtThanhToan.Text);
-            //int TongTien;
-            //TongTien = (Gia * SoLuong);
-            //txtThanhToan.Text = TongTien.ToString();
-            ////txtThanhToan.Show();
-            ///
+        //private void btThanhToan_Click(object sender, EventArgs e)
+        //{
+        //    int Gia;
+        //    int SoLuong;
+        //    int ThanhToan;
+        //    Gia = Convert.ToInt16(txtGia.Text);
+        //    SoLuong = Convert.ToInt16(txtSoLuong.Text);
+        //    ThanhToan = Convert.ToInt16(txtThanhToan.Text);
+        //    int TongTien;
+        //    TongTien = (Gia * SoLuong);
+        //    txtThanhToan.Text = TongTien.ToString();
+         
 
-            //    int Gia = Convert.ToInt16(txtGia.Text);
-            //    int SoLuong = Convert.ToInt16(txtSoLuong.Text);
-            //    txtThanhToan.Text = (Gia * SoLuong).ToString();
-            int Gia = Int32.Parse(txtGia.Text);
-            int SoLuong = Int32.Parse(txtSoLuong.Text);
-            txtThanhToan.Text = (Gia * SoLuong).ToString();
-        }
+        //    int Gia = Convert.ToInt16(txtGia.Text);
+        //    int SoLuong = Convert.ToInt16(txtSoLuong.Text);
+        //    txtThanhToan.Text = (Gia * SoLuong).ToString();
+        //    int Gia = Int32.Parse(txtGia.Text);
+        //    int SoLuong = Int32.Parse(txtSoLuong.Text);
+        //    txtThanhToan.Text = (Gia * SoLuong).ToString();
+        //}
 
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form4 n4 = new Form4();
-            n4.ShowDialog();
-        }
+        //private void btThongKe_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    Form4 n4 = new Form4();
+        //    n4.ShowDialog();
+        //}
 
         private void btThoat_Click(object sender, EventArgs e)
         {
@@ -72,5 +68,12 @@ namespace WindowsFormsApp1
             int SoLuong = Int32.Parse(txtSoLuong.Text);
             txtThanhToan.Text = (Gia * SoLuong).ToString();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

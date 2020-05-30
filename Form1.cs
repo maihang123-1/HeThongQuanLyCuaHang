@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
+using System.Data;
 
 namespace WindowsFormsApp1
 {
@@ -20,33 +21,60 @@ namespace WindowsFormsApp1
         }
         
         
-        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Form2 n2 = new Form2();
             n2.ShowDialog();
-            this.Show();
+            //this.Show();
         }
 
-        
+       
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-
-            if (txtUsername.Text == "admin" || txtPassword.Text == "admin12345")
+            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+            try {
+                
+                connnection.Open();
+                string tk = txtUsername.Text;
+                string mk = txtPassword.Text;
+                string sql = "Select * From TaiKhoan Where TenDangNhap ='" + tk + "'and Matkhau ='" + mk + "'";
+                SqlCommand cmd = new SqlCommand(sql,connnection);
+                SqlDataReader dt = cmd.ExecuteReader();
+                if(dt.Read()==true)
+                {
+                    MessageBox.Show("Đăng nhập thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Hide();
+                    Form3 n3 = new Form3();
+                    n3.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connnection.Close();
+                // dùng cho câu lệnh insert, update
+               // cmd.ExecuteNonQuery();
+             }
+            catch(Exception ex)
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo");
-                this.Hide();
-                Form3 n3 = new Form3();
-                n3.ShowDialog();
-                this.Show();
+                MessageBox.Show("Lỗi kết nối ");
             }
-            else
-            {
-                MessageBox.Show("Vui lòng nhập lại !!", "Thông báo");
+            //if (txtUsername.Text == "admin" || txtPassword.Text == "admin12345")
+            //{
+            //    MessageBox.Show("Đăng nhập thành công", "Thông báo");
+            //    this.Hide();
+            //    Form3 n3 = new Form3();
+            //    n3.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Vui lòng nhập lại !!", "Thông báo");
 
-            }
+            //}
 
         }
 
