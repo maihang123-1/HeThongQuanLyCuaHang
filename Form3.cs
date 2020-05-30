@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -62,18 +63,57 @@ namespace WindowsFormsApp1
                 Application.Exit();
         }
 
-        private void btThanhToan_Click_1(object sender, EventArgs e)
+        
+
+        private void btThanhToan_Click(object sender, EventArgs e)
         {
+
             int Gia = Int32.Parse(txtGia.Text);
             int SoLuong = Int32.Parse(txtSoLuong.Text);
-            txtThanhToan.Text = (Gia * SoLuong).ToString();
+            txtTongTien.Text = (Gia * SoLuong).ToString();
+            txtThanhToan.Text += txtTongTien.Text;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+            connnection.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select Gia From SanPham", connnection);
+            da.Fill(dt);
+            //string sqlItem = "Select SanPham From SanPham";
+            //SqlCommand cmd3 = new SqlCommand(sqlItem, connnection);
+            //cbbxSanPham.Items =;
+            //string sqlGia = "Select ";
+            //txtGia.Text = "";
+            cbbxSanPham.DataSource = dt;
+            cbbxSanPham.DisplayMember = "SanPham";
+            cbbxSanPham.ValueMember = "SanPham";
 
+            connnection.Close();
         }
 
-        
+        private void cbbxSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+            connnection.Open();
+            
+          
+            SqlDataAdapter da = new SqlDataAdapter("Select * From SanPham", connnection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            //string sqlItem = "Select SanPham From SanPham";
+            //SqlCommand cmd3 = new SqlCommand(sqlItem, connnection);
+            //cbbxSanPham.Items =;
+            //string sqlGia = "Select ";
+            //txtGia.Text = "";
+            
+            cbbxSanPham.DataSource = dt;
+            cbbxSanPham.DisplayMember = "SanPham";
+            cbbxSanPham.ValueMember = "SanPham";
+
+            connnection.Close();
+        }
+
     }
 }

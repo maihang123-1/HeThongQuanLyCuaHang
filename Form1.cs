@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
-using System.Data;
+
 
 namespace WindowsFormsApp1
 {
@@ -88,7 +88,16 @@ namespace WindowsFormsApp1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Bạn có muốn reset lại password ??", "Thông báo",MessageBoxButtons.YesNo);
+            DialogResult kq= MessageBox.Show("Bạn có muốn reset lại password ??", "Thông báo",MessageBoxButtons.YesNo);
+            if(kq==DialogResult.OK)
+            {
+                this.Hide();
+                Form6 n6 = new Form6();
+                n6.ShowDialog();
+                
+                //string sqlReset = "Update TaiKhoan Set MatKhau ="";
+            }    
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
