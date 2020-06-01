@@ -28,44 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btThanhToan = new System.Windows.Forms.Button();
-            this.lbSanPham = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.cbbxSanPham = new System.Windows.Forms.ComboBox();
             this.btThoat = new System.Windows.Forms.Button();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtThanhToan = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.Chose = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btTongTien = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btThanhToan
-            // 
-            this.btThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btThanhToan.Location = new System.Drawing.Point(276, 378);
-            this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.Size = new System.Drawing.Size(101, 35);
-            this.btThanhToan.TabIndex = 0;
-            this.btThanhToan.Text = "Tổng tiền";
-            this.btThanhToan.UseVisualStyleBackColor = true;
-            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
-            // 
-            // lbSanPham
-            // 
-            this.lbSanPham.AutoSize = true;
-            this.lbSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbSanPham.Location = new System.Drawing.Point(19, 83);
-            this.lbSanPham.Name = "lbSanPham";
-            this.lbSanPham.Size = new System.Drawing.Size(72, 17);
-            this.lbSanPham.TabIndex = 1;
-            this.lbSanPham.Text = "Sản phẩm";
             // 
             // lbGia
             // 
@@ -103,17 +81,6 @@
             this.txtGia.TabIndex = 2;
             this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // cbbxSanPham
-            // 
-            this.cbbxSanPham.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbxSanPham.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbxSanPham.FormattingEnabled = true;
-            this.cbbxSanPham.Location = new System.Drawing.Point(112, 79);
-            this.cbbxSanPham.Name = "cbbxSanPham";
-            this.cbbxSanPham.Size = new System.Drawing.Size(135, 21);
-            this.cbbxSanPham.TabIndex = 1;
-            this.cbbxSanPham.SelectedIndexChanged += new System.EventHandler(this.cbbxSanPham_SelectedIndexChanged);
-            // 
             // btThoat
             // 
             this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -124,14 +91,6 @@
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(414, 393);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(169, 20);
-            this.txtTongTien.TabIndex = 5;
-            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dateTimePicker1
             // 
@@ -162,7 +121,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(276, 432);
+            this.button1.Location = new System.Drawing.Point(307, 432);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 15;
@@ -177,59 +136,85 @@
             this.txtThanhToan.TabIndex = 16;
             this.txtThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // dataGridView1
+            // dgvSanPham
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(578, 214);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Chose});
+            this.dgvSanPham.Location = new System.Drawing.Point(5, 121);
+            this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.Size = new System.Drawing.Size(596, 214);
+            this.dgvSanPham.TabIndex = 17;
+            this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
+            // 
+            // Chose
+            // 
+            this.Chose.HeaderText = "";
+            this.Chose.Name = "Chose";
+            this.Chose.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Chose.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Chose.Width = 40;
+            // 
+            // btTongTien
+            // 
+            this.btTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btTongTien.Location = new System.Drawing.Point(307, 375);
+            this.btTongTien.Name = "btTongTien";
+            this.btTongTien.Size = new System.Drawing.Size(101, 35);
+            this.btTongTien.TabIndex = 18;
+            this.btTongTien.Text = "Tổng tiền";
+            this.btTongTien.UseVisualStyleBackColor = true;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(414, 390);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(169, 20);
+            this.txtTongTien.TabIndex = 19;
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 493);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(603, 493);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.btTongTien);
+            this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.txtThanhToan);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btThoat);
-            this.Controls.Add(this.cbbxSanPham);
-            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.btThanhToan);
             this.Controls.Add(this.lbSoLuong);
             this.Controls.Add(this.lbGia);
-            this.Controls.Add(this.lbSanPham);
             this.Controls.Add(this.txtGia);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form3_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btThanhToan;
-        private System.Windows.Forms.Label lbSanPham;
         private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.ComboBox cbbxSanPham;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtThanhToan;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSanPham;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Chose;
+        private System.Windows.Forms.Button btTongTien;
+        private System.Windows.Forms.TextBox txtTongTien;
     }
 }

@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                 connnection.Open();
                 string tk = txtUsername.Text;
                 string mk = txtPassword.Text;
-                string sql = "Select * From TaiKhoan Where TenDangNhap ='" + tk + "'and Matkhau ='" + mk + "'";
+                string sql = "Select * From TaiKhoan Where TenTaiKhoan ='" + tk + "'and Matkhau ='" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql,connnection);
                 SqlDataReader dt = cmd.ExecuteReader();
                 if(dt.Read()==true)
@@ -62,19 +62,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Lỗi kết nối ");
             }
-            //if (txtUsername.Text == "admin" || txtPassword.Text == "admin12345")
-            //{
-            //    MessageBox.Show("Đăng nhập thành công", "Thông báo");
-            //    this.Hide();
-            //    Form3 n3 = new Form3();
-            //    n3.ShowDialog();
-            //    this.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Vui lòng nhập lại !!", "Thông báo");
-
-            //}
+            
 
         }
 

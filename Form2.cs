@@ -29,17 +29,37 @@ namespace WindowsFormsApp1
 
         private void btTao_Click(object sender, EventArgs e)
         {
-            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+            //string tk2 = txtTenDangNhap.Text;
+            //string email2 = txtEmail.Text;
+            //string sqlTen = @"Select TaiKhoan From TaiKhoanNguoiDung Where TaiKhoan = '" + tk2 + "'";
+            //string sqlEmail = @"Select Email From TaiKhoanNguoiDung Where Email = '" + email2 + "'";
+            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
             connnection.Open();
-            string sqlCreateAccount = "Insert Into TaiKhoan(TaiKhoan, MatKhau) Value('" + txtTenDangNhap.Text + "','" + txtMatKhau.Text + "')";
-            SqlCommand cmd2 = new SqlCommand(sqlCreateAccount,connnection);
-            cmd2.Parameters.AddWithValue("TenDangNhap", txtTenDangNhap.Text);
-            cmd2.Parameters.AddWithValue("MatKhau", txtMatKhau.Text);
-            cmd2.ExecuteNonQuery();
-            //if (txtTenDangNhap.Text == null || txtMatKhau.Text == null)
-            //    MessageBox.Show("Vui lòng nhập lại ");
-          
-            connnection.Close();
+            //string sqlCreateAccount = @"Insert Into TaiKhoanNguoiDung(TaiKhoan,MatKhau,Email) Value('" + txtTenDangNhap.Text + "','" + txtMatKhau.Text + "','"+txtEmail.Text+"')";
+            if (txtTenDangNhap.Text == "" || txtEmail.Text == ""||txtMatKhau.Text=="")
+                MessageBox.Show("Vui lòng nhập lại thông tin ");
+            //else if (tk2 == sqlTen)
+            //{
+            //    //string tk2 = txtTenDangNhap.Text;
+            //    //string sqlTen = "Select * From TaiKhoanNguoiDung Where Email = '" + tk2 + "'";              
+            //        MessageBox.Show("Tên tài khoản này đã tồn tại");
+            //}
+            //else if (email2== sqlEmail)
+            //    MessageBox.Show("Địa chỉ Email này đã tồn tại");
+
+            //else
+            //{
+            //    SqlCommand cmd2 = new SqlCommand(sqlCreateAccount, connnection);
+            //    cmd2.Parameters.AddWithValue("TaiKhoan", txtTenDangNhap.Text);
+            //    cmd2.Parameters.AddWithValue("MatKhau", txtMatKhau.Text);
+            //    cmd2.Parameters.AddWithValue("Email", txtEmail.Text);
+            //    //cmd2.ExecuteNonQuery();
+               
+            //    //cmd2.ExecuteReader();
+            //    MessageBox.Show("Tạo tài khoản thành công");
+            //    this.Close();
+            //}
+            //connnection.Close();
         }
     }
 }

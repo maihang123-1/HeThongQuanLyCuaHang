@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public partial class Form4 : Form
-    {
+    { //Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True
         public Form4()
         {
             InitializeComponent();
@@ -22,6 +22,11 @@ namespace WindowsFormsApp1
             DialogResult result= MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
