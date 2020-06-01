@@ -42,6 +42,7 @@
             this.Chose = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btTongTien = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbGia.Location = new System.Drawing.Point(22, 350);
+            this.lbGia.Location = new System.Drawing.Point(12, 404);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(30, 17);
             this.lbGia.TabIndex = 2;
@@ -59,7 +60,7 @@
             // 
             this.lbSoLuong.AutoSize = true;
             this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbSoLuong.Location = new System.Drawing.Point(19, 384);
+            this.lbSoLuong.Location = new System.Drawing.Point(12, 441);
             this.lbSoLuong.Name = "lbSoLuong";
             this.lbSoLuong.Size = new System.Drawing.Size(64, 17);
             this.lbSoLuong.TabIndex = 3;
@@ -67,7 +68,7 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(92, 381);
+            this.txtSoLuong.Location = new System.Drawing.Point(92, 441);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(112, 20);
             this.txtSoLuong.TabIndex = 3;
@@ -75,7 +76,7 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(92, 347);
+            this.txtGia.Location = new System.Drawing.Point(92, 403);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(112, 20);
             this.txtGia.TabIndex = 2;
@@ -121,7 +122,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(307, 432);
+            this.button1.Location = new System.Drawing.Point(307, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 15;
@@ -158,7 +159,7 @@
             // btTongTien
             // 
             this.btTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btTongTien.Location = new System.Drawing.Point(307, 375);
+            this.btTongTien.Location = new System.Drawing.Point(307, 382);
             this.btTongTien.Name = "btTongTien";
             this.btTongTien.Size = new System.Drawing.Size(101, 35);
             this.btTongTien.TabIndex = 18;
@@ -173,11 +174,22 @@
             this.txtTongTien.TabIndex = 19;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(94, 361);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 17);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tên sản phẩm";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 493);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.btTongTien);
             this.Controls.Add(this.dgvSanPham);
@@ -216,5 +228,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Chose;
         private System.Windows.Forms.Button btTongTien;
         private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label3;
     }
 }

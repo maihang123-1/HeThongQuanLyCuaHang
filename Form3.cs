@@ -60,23 +60,24 @@ namespace WindowsFormsApp1
 
             int Gia = Int32.Parse(txtGia.Text);
             int SoLuong = Int32.Parse(txtSoLuong.Text);
-            txtThanhToan.Text = (Gia * SoLuong).ToString();
+            txtTongTien.Text = (Gia * SoLuong).ToString();
+            txtThanhToan.Text += txtTongTien.Text;
             
            
         }
 
         private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewRow row in dgvSanPham.Rows)
-            {
-                da = new SqlDataAdapter("Select Gia From SanPham ", connnection);
-                DataSet txt1 = new DataSet("Select Gia From SanPham ");
-                DataGridTextBox txt = new DataGridTextBox();
-                da.Fill(txt1);
-                da.Dispose();
-                txtGia.Text = txt1.ToString();
+            //foreach (DataGridViewRow row in dgvSanPham.Rows)
+            //{
+            //    da = new SqlDataAdapter("Select Gia From SanPham ", connnection);
+            //    DataSet txt1 = new DataSet("Select Gia From SanPham ");
+            //    DataGridTextBox txt = new DataGridTextBox();
+            //    da.Fill(txt1);
+            //    da.Dispose();
+            //    txtGia.Text = txt1.ToString();
                
-            }
+            //}
         }
     }
 }
