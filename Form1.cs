@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             this.Hide();
             Form2 n2 = new Form2();
             n2.ShowDialog();
-            //this.Show();
+            
         }
 
        

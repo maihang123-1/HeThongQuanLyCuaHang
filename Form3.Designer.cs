@@ -53,7 +53,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbGia.Location = new System.Drawing.Point(22, 392);
+            this.lbGia.Location = new System.Drawing.Point(56, 385);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(30, 17);
             this.lbGia.TabIndex = 2;
@@ -125,12 +125,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(389, 423);
+            this.button1.Location = new System.Drawing.Point(375, 429);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 15;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtThanhToan
             // 
@@ -180,12 +181,13 @@
             // btTongTien
             // 
             this.btTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btTongTien.Location = new System.Drawing.Point(389, 374);
+            this.btTongTien.Location = new System.Drawing.Point(375, 376);
             this.btTongTien.Name = "btTongTien";
             this.btTongTien.Size = new System.Drawing.Size(101, 35);
             this.btTongTien.TabIndex = 18;
             this.btTongTien.Text = "Tổng tiền";
             this.btTongTien.UseVisualStyleBackColor = true;
+            this.btTongTien.Click += new System.EventHandler(this.btTongTien_Click);
             // 
             // txtTongTien
             // 
@@ -214,6 +216,7 @@
             this.btThemSP.TabIndex = 21;
             this.btThemSP.Text = "Thêm SP";
             this.btThemSP.UseVisualStyleBackColor = true;
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
             // Form3
             // 

@@ -44,9 +44,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(84, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 13);
+            this.label1.Size = new System.Drawing.Size(153, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Vui lòng nhập mật khẩu mới";
+            this.label1.Text = "Vui lòng nhập đầy đủ thông tin";
             // 
             // txtMatkhaumoi
             // 
@@ -131,6 +131,7 @@
             this.Controls.Add(this.txtMatkhaumoi);
             this.Controls.Add(this.label1);
             this.Name = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐỔI MẬT KHẨU";
             this.ResumeLayout(false);
             this.PerformLayout();
