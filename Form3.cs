@@ -81,9 +81,7 @@ namespace WindowsFormsApp1
         {
 
             int Gia = Int32.Parse(txtGia.Text);
-            int SoLuong = Int32.Parse(txtSoLuong.Text);
-            Gia = 0;
-            SoLuong = 1;
+            int SoLuong = Int32.Parse(txtSoLuong.Text);           
             txtTongTien.Text = (Gia * SoLuong).ToString();
             txtThanhToan.Text += txtTongTien.Text;
         }

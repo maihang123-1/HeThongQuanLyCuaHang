@@ -53,7 +53,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbGia.Location = new System.Drawing.Point(56, 385);
+            this.lbGia.Location = new System.Drawing.Point(56, 390);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(30, 17);
             this.lbGia.TabIndex = 2;

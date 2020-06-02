@@ -49,6 +49,10 @@ namespace WindowsFormsApp1
                         MessageBox.Show("HAHA");
                         MessageBox.Show("Vui lòng nhập lại thông tin ", "Thông báo");
                     }
+                    //else if((Int32.Parse( txtMatKhau.Text) <6))
+                    //{
+                    //    MessageBox.Show("Mật khẩu tối thiểu 6 ký tự, vui lòng nhập lại");
+                    //}    
                     else
                     {
                         string sqlCreate = "Inser Into TaiKhoan(TenTaiKhoan,MatKhau) Values('" + txtTenDangNhap.Text + "','" + txtMatKhau.Text + "')";
