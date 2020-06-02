@@ -21,8 +21,26 @@ namespace WindowsFormsApp1
         {
             SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
             connnection.Open();
-            string sqlSelectDt = "Select * From TaiKhoan";
-            SqlCommand cmd6 = new SqlCommand(sqlSelectDt,connnection);
+            string sqlSelectDt = "Update TaiKhoan Set TenTaiKhoan='" + txtTaiKhoan.Text + "',MatKhau='" + txtMatkhaumoi.Text + "'";
+            if (string.IsNullOrEmpty(txtTaiKhoan.Text) || string.IsNullOrEmpty(txtMatkhaumoi.Text) || string.IsNullOrEmpty(txtXacnhanMk.Text))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            else
+            {
+                if (txtMatkhaumoi.Text != txtXacnhanMk.Text)
+                    MessageBox.Show("Xác nhận lại mật khẩu thất bại, vui lòng nhập lại", "Thông báo");
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(sqlSelectDt, connnection);
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+        }
+
+        private void btThoatF6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

@@ -23,16 +23,16 @@ namespace WindowsFormsApp1
         
         private void btHuy_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 Application.Exit();
-
+            
         }
 
         private void btTao_Click(object sender, EventArgs e)
         {
             SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
             connnection.Open();
-            if(string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtMatKhau.Text))
+            if( string.IsNullOrEmpty(txtMatKhau.Text))
             {
                 string sqlTen = "Select TenTaiKhoan From TaiKhoan Where TenTaiKhoan='" + txtTenDangNhap.Text + "'";
 
@@ -44,10 +44,22 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(txtTenDangNhap.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtMatKhau.Text))
+                    if (string.IsNullOrEmpty(txtTenDangNhap.Text) || string.IsNullOrEmpty(txtMatKhau.Text))
                     {
                         MessageBox.Show("HAHA");
                         MessageBox.Show("Vui lòng nhập lại thông tin ", "Thông báo");
+                    }
+                    else
+                    {
+                        string sqlCreate = "Inser Into TaiKhoan(TenTaiKhoan,MatKhau) Values('" + txtTenDangNhap.Text + "','" + txtMatKhau.Text + "')";
+                        
+
+                        SqlCommand cmd2 = new SqlCommand(sqlCreate, connnection);
+                        cmd2.CommandText = sqlCreate;
+                        cmd2.Parameters.AddWithValue("TenTaiKhoan", txtTenDangNhap.Text);
+                        cmd2.Parameters.AddWithValue("MatKhau", txtMatKhau.Text);
+                        cmd2.ExecuteNonQuery();
+                        MessageBox.Show("Tạo tài khoản thành công");
                     }
                 }
 
@@ -56,27 +68,9 @@ namespace WindowsFormsApp1
            
 
 
-            //else if (tk2 == sqlTen)
-            //{
-            //    //string tk2 = txtTenDangNhap.Text;
-            //    //string sqlTen = "Select * From TaiKhoanNguoiDung Where Email = '" + tk2 + "'";              
-            //        MessageBox.Show("Tên tài khoản này đã tồn tại");
-            //}
-            //else if (email2== sqlEmail)
-            //    MessageBox.Show("Địa chỉ Email này đã tồn tại");
+           
 
-            //else
-            //{
-            //    SqlCommand cmd2 = new SqlCommand(sqlCreateAccount, connnection);
-            //    cmd2.Parameters.AddWithValue("TaiKhoan", txtTenDangNhap.Text);
-            //    cmd2.Parameters.AddWithValue("MatKhau", txtMatKhau.Text);
-            //    cmd2.Parameters.AddWithValue("Email", txtEmail.Text);
-            //    //cmd2.ExecuteNonQuery();
-
-            //    //cmd2.ExecuteReader();
-            //    MessageBox.Show("Tạo tài khoản thành công");
-            //    this.Close();
-            //}
+          
             connnection.Close();
         }
     }

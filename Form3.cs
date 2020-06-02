@@ -21,19 +21,13 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        public void ShowMessagebox()
-        {
-            DialogResult result = MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
-                this.Close();
-
-        }
+       
         
 
         
         private void btThoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 Application.Exit();
         }
       
@@ -79,5 +73,7 @@ namespace WindowsFormsApp1
                
             //}
         }
+
+        
     }
 }

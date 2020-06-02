@@ -21,5 +21,12 @@ namespace WindowsFormsApp1
         {
             //Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+                this.Close();
+        }
     }
 }

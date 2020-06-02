@@ -35,8 +35,6 @@
             this.btTao = new System.Windows.Forms.Button();
             this.btHuy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbTenDangNhap
@@ -53,7 +51,7 @@
             // lbMatKhau
             // 
             this.lbMatKhau.AutoSize = true;
-            this.lbMatKhau.Location = new System.Drawing.Point(70, 259);
+            this.lbMatKhau.Location = new System.Drawing.Point(70, 225);
             this.lbMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(75, 20);
@@ -72,7 +70,7 @@
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtMatKhau.Location = new System.Drawing.Point(208, 259);
+            this.txtMatKhau.Location = new System.Drawing.Point(208, 225);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(222, 20);
@@ -111,32 +109,11 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "TẠO TÀI KHOẢN";
             // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(70, 205);
-            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(100, 20);
-            this.lbEmail.TabIndex = 7;
-            this.lbEmail.Text = "Địa chỉ Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtEmail.Location = new System.Drawing.Point(208, 205);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(222, 20);
-            this.txtEmail.TabIndex = 8;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 412);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.btTao);
@@ -163,7 +140,5 @@
         private System.Windows.Forms.Button btHuy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenDangNhap;
-        private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox txtEmail;
     }
 }

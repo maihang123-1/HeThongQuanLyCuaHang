@@ -39,10 +39,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtThanhToan = new System.Windows.Forms.TextBox();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
-            this.Chose = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ChckChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ClSua = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ClXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btTongTien = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btThemSP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +53,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbGia.Location = new System.Drawing.Point(12, 404);
+            this.lbGia.Location = new System.Drawing.Point(22, 392);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(30, 17);
             this.lbGia.TabIndex = 2;
@@ -60,7 +63,7 @@
             // 
             this.lbSoLuong.AutoSize = true;
             this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbSoLuong.Location = new System.Drawing.Point(12, 441);
+            this.lbSoLuong.Location = new System.Drawing.Point(22, 438);
             this.lbSoLuong.Name = "lbSoLuong";
             this.lbSoLuong.Size = new System.Drawing.Size(64, 17);
             this.lbSoLuong.TabIndex = 3;
@@ -68,7 +71,7 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(92, 441);
+            this.txtSoLuong.Location = new System.Drawing.Point(97, 438);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(112, 20);
             this.txtSoLuong.TabIndex = 3;
@@ -76,7 +79,7 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(92, 403);
+            this.txtGia.Location = new System.Drawing.Point(97, 389);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(112, 20);
             this.txtGia.TabIndex = 2;
@@ -85,7 +88,7 @@
             // btThoat
             // 
             this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btThoat.Location = new System.Drawing.Point(474, 32);
+            this.btThoat.Location = new System.Drawing.Point(590, 45);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(109, 41);
             this.btThoat.TabIndex = 4;
@@ -122,7 +125,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(307, 439);
+            this.button1.Location = new System.Drawing.Point(389, 423);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 15;
@@ -131,7 +134,7 @@
             // 
             // txtThanhToan
             // 
-            this.txtThanhToan.Location = new System.Drawing.Point(414, 447);
+            this.txtThanhToan.Location = new System.Drawing.Point(496, 438);
             this.txtThanhToan.Name = "txtThanhToan";
             this.txtThanhToan.Size = new System.Drawing.Size(169, 20);
             this.txtThanhToan.TabIndex = 16;
@@ -141,25 +144,43 @@
             // 
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Chose});
+            this.ChckChon,
+            this.ClSua,
+            this.ClXoa});
             this.dgvSanPham.Location = new System.Drawing.Point(5, 121);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(596, 214);
+            this.dgvSanPham.Size = new System.Drawing.Size(703, 214);
             this.dgvSanPham.TabIndex = 17;
             this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
-            // Chose
+            // ChckChon
             // 
-            this.Chose.HeaderText = "";
-            this.Chose.Name = "Chose";
-            this.Chose.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Chose.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Chose.Width = 40;
+            this.ChckChon.HeaderText = "";
+            this.ChckChon.Name = "ChckChon";
+            this.ChckChon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ChckChon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ChckChon.Width = 40;
+            // 
+            // ClSua
+            // 
+            this.ClSua.HeaderText = "Sửa";
+            this.ClSua.Name = "ClSua";
+            this.ClSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClSua.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ClSua.Width = 40;
+            // 
+            // ClXoa
+            // 
+            this.ClXoa.HeaderText = "Xóa";
+            this.ClXoa.Name = "ClXoa";
+            this.ClXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ClXoa.Width = 40;
             // 
             // btTongTien
             // 
             this.btTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btTongTien.Location = new System.Drawing.Point(307, 382);
+            this.btTongTien.Location = new System.Drawing.Point(389, 374);
             this.btTongTien.Name = "btTongTien";
             this.btTongTien.Size = new System.Drawing.Size(101, 35);
             this.btTongTien.TabIndex = 18;
@@ -168,7 +189,7 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(414, 390);
+            this.txtTongTien.Location = new System.Drawing.Point(496, 382);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(169, 20);
             this.txtTongTien.TabIndex = 19;
@@ -178,17 +199,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(94, 361);
+            this.label3.Location = new System.Drawing.Point(94, 351);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Tên sản phẩm";
             // 
+            // btThemSP
+            // 
+            this.btThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btThemSP.Location = new System.Drawing.Point(462, 45);
+            this.btThemSP.Name = "btThemSP";
+            this.btThemSP.Size = new System.Drawing.Size(109, 41);
+            this.btThemSP.TabIndex = 21;
+            this.btThemSP.Text = "Thêm SP";
+            this.btThemSP.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 493);
+            this.ClientSize = new System.Drawing.Size(711, 493);
+            this.Controls.Add(this.btThemSP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.btTongTien);
@@ -225,9 +257,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtThanhToan;
         private System.Windows.Forms.DataGridView dgvSanPham;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Chose;
         private System.Windows.Forms.Button btTongTien;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ChckChon;
+        private System.Windows.Forms.DataGridViewButtonColumn ClSua;
+        private System.Windows.Forms.DataGridViewButtonColumn ClXoa;
+        private System.Windows.Forms.Button btThemSP;
     }
 }

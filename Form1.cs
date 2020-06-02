@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 Application.Exit();
 
         }

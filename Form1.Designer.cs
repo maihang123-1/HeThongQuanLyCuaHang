@@ -161,10 +161,10 @@
         private System.Windows.Forms.CheckBox chckShow;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        public System.Windows.Forms.TextBox txtUsername;
     }
 }
 
