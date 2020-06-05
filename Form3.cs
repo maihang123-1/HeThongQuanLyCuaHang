@@ -34,47 +34,50 @@ namespace WindowsFormsApp1
         }
       
        
-
+        public void HienThi()
+        {
+            string sqlSelect = "Select * From SanPham";
+            SqlCommand cmd = new SqlCommand(sqlSelect,connnection);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvSanPham.DataSource = dt;
+        }
 
        
 
         private void Form3_Load_1(object sender, EventArgs e)
         {
             connnection.Open();
-           
+            HienThi();
             
-            da = new SqlDataAdapter("Select * From SanPham",connnection);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            da.Dispose();
-            dgvSanPham.DataSource = dt;
+            
            
             connnection.Close();
         }
 
 
         
-        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //foreach (DataGridViewRow row in dgvSanPham.Rows)
-            //{
-            //    da = new SqlDataAdapter("Select Gia From SanPham ", connnection);
-            //    DataSet txt1 = new DataSet("Select Gia From SanPham ");
-            //    DataGridTextBox txt = new DataGridTextBox();
-            //    da.Fill(txt1);
-            //    da.Dispose();
-            //    txtGia.Text = txt1.ToString();
-               
-            //}
-        }
-
+        
         private void btThemSP_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form7 n7 = new Form7();
-            n7.ShowDialog();
-           
+            connnection.Open();
+            string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
+            SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
+            cmd.Parameters.AddWithValue("MaSP",txtMaSP.Text );
+            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Thêm sản phẩm thành công");
+            HienThi();
+            //this.Hide();
+            //Form5 n5 = new Form5();
+            //n5.ShowDialog();
 
+            connnection.Close();
         }
 
         private void btTongTien_Click(object sender, EventArgs e)
