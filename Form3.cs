@@ -154,5 +154,22 @@ namespace WindowsFormsApp1
             HienThi();
             connnection.Close();
         }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            connnection.Open();
+            string sqlUpdate = "Update SanPham Set TenSP =@TenSP, Gia=@Gia, DonVi=@DonVi, SoLuong=@SoLuong, GhiChu=@GhiChu Where MaSP=@MaSP ";
+            SqlCommand cmd = new SqlCommand(sqlUpdate, connnection);
+            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
+            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Cập nhật thông tin sản phẩm thành công");
+            HienThi();
+            connnection.Close();
+        }
     }
 }

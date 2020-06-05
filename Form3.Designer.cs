@@ -330,8 +330,9 @@
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(76, 41);
             this.btSua.TabIndex = 32;
-            this.btSua.Text = "Sửa";
+            this.btSua.Text = "Cập nhật";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // Form3
             // 
