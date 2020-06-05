@@ -55,6 +55,8 @@
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.lbSoLuongBan = new System.Windows.Forms.Label();
             this.txtSoLuongBan = new System.Windows.Forms.TextBox();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +99,7 @@
             // btThoat
             // 
             this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btThoat.Location = new System.Drawing.Point(310, 170);
+            this.btThoat.Location = new System.Drawing.Point(509, 170);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(76, 41);
             this.btThoat.TabIndex = 4;
@@ -134,7 +136,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(425, 122);
+            this.button1.Location = new System.Drawing.Point(425, 121);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
             this.button1.TabIndex = 15;
@@ -307,14 +309,37 @@
             this.txtSoLuongBan.Multiline = true;
             this.txtSoLuongBan.Name = "txtSoLuongBan";
             this.txtSoLuongBan.Size = new System.Drawing.Size(76, 25);
-            this.txtSoLuongBan.TabIndex = 31;
+            this.txtSoLuongBan.TabIndex = 1;
             this.txtSoLuongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btXoa
+            // 
+            this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btXoa.Location = new System.Drawing.Point(310, 170);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(76, 41);
+            this.btXoa.TabIndex = 31;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btSua
+            // 
+            this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btSua.Location = new System.Drawing.Point(409, 170);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(76, 41);
+            this.btSua.TabIndex = 32;
+            this.btSua.Text = "Sửa";
+            this.btSua.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 493);
+            this.Controls.Add(this.btSua);
+            this.Controls.Add(this.btXoa);
             this.Controls.Add(this.txtSoLuongBan);
             this.Controls.Add(this.lbSoLuongBan);
             this.Controls.Add(this.txtGhiChu);
@@ -377,5 +402,7 @@
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label lbSoLuongBan;
         private System.Windows.Forms.TextBox txtSoLuongBan;
+        private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.Button btSua;
     }
 }
