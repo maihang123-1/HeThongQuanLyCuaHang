@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbGia = new System.Windows.Forms.Label();
-            this.lbSoLuong = new System.Windows.Forms.Label();
+            this.lbSoLuongKho = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.btThoat = new System.Windows.Forms.Button();
@@ -53,6 +53,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.lbSoLuongBan = new System.Windows.Forms.Label();
+            this.txtSoLuongBan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,21 +68,21 @@
             this.lbGia.TabIndex = 2;
             this.lbGia.Text = "Giá";
             // 
-            // lbSoLuong
+            // lbSoLuongKho
             // 
-            this.lbSoLuong.AutoSize = true;
-            this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbSoLuong.Location = new System.Drawing.Point(3, 170);
-            this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(64, 17);
-            this.lbSoLuong.TabIndex = 3;
-            this.lbSoLuong.Text = "Số lượng";
+            this.lbSoLuongKho.AutoSize = true;
+            this.lbSoLuongKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbSoLuongKho.Location = new System.Drawing.Point(3, 170);
+            this.lbSoLuongKho.Name = "lbSoLuongKho";
+            this.lbSoLuongKho.Size = new System.Drawing.Size(91, 17);
+            this.lbSoLuongKho.TabIndex = 3;
+            this.lbSoLuongKho.Text = "Số lượng kho";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(73, 170);
+            this.txtSoLuong.Location = new System.Drawing.Point(108, 170);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(112, 20);
+            this.txtSoLuong.Size = new System.Drawing.Size(77, 20);
             this.txtSoLuong.TabIndex = 3;
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -159,6 +161,8 @@
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.Size = new System.Drawing.Size(695, 269);
             this.dgvSanPham.TabIndex = 17;
+            this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
+            this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
             // ChckChon
             // 
@@ -272,7 +276,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(202, 93);
+            this.label6.Location = new System.Drawing.Point(202, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 17);
             this.label6.TabIndex = 28;
@@ -280,18 +284,39 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(274, 91);
+            this.txtGhiChu.Location = new System.Drawing.Point(274, 129);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(112, 63);
+            this.txtGhiChu.Size = new System.Drawing.Size(112, 25);
             this.txtGhiChu.TabIndex = 29;
             this.txtGhiChu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbSoLuongBan
+            // 
+            this.lbSoLuongBan.AutoSize = true;
+            this.lbSoLuongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbSoLuongBan.Location = new System.Drawing.Point(202, 94);
+            this.lbSoLuongBan.Name = "lbSoLuongBan";
+            this.lbSoLuongBan.Size = new System.Drawing.Size(92, 17);
+            this.lbSoLuongBan.TabIndex = 30;
+            this.lbSoLuongBan.Text = "Số lượng bán";
+            // 
+            // txtSoLuongBan
+            // 
+            this.txtSoLuongBan.Location = new System.Drawing.Point(310, 91);
+            this.txtSoLuongBan.Multiline = true;
+            this.txtSoLuongBan.Name = "txtSoLuongBan";
+            this.txtSoLuongBan.Size = new System.Drawing.Size(76, 25);
+            this.txtSoLuongBan.TabIndex = 31;
+            this.txtSoLuongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 493);
+            this.Controls.Add(this.txtSoLuongBan);
+            this.Controls.Add(this.lbSoLuongBan);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -311,7 +336,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.lbSoLuong);
+            this.Controls.Add(this.lbSoLuongKho);
             this.Controls.Add(this.lbGia);
             this.Controls.Add(this.txtGia);
             this.Name = "Form3";
@@ -326,7 +351,7 @@
 
         #endregion
         private System.Windows.Forms.Label lbGia;
-        private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.Label lbSoLuongKho;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Button btThoat;
@@ -350,5 +375,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.Label lbSoLuongBan;
+        private System.Windows.Forms.TextBox txtSoLuongBan;
     }
 }

@@ -72,21 +72,25 @@ namespace WindowsFormsApp1
             cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Thêm sản phẩm thành công");
-            HienThi();
-            //this.Hide();
-            //Form5 n5 = new Form5();
-            //n5.ShowDialog();
-
+            HienThi();         
             connnection.Close();
         }
 
         private void btTongTien_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtSoLuongBan.Text))
+                MessageBox.Show("Vui lòng nhập số lượng bán");
+            else
+            {
+                int Gia = Int32.Parse(txtGia.Text);
+                int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
+                txtTongTien.Text = (Gia * SoLuongBan).ToString();
+                //txtThanhToan.Text += txtTongTien.Text;
+                int tam = Int32.Parse( txtTongTien.Text);
+                txtThanhToan.Text += tam;
+            }
+            
 
-            int Gia = Int32.Parse(txtGia.Text);
-            int SoLuong = Int32.Parse(txtSoLuong.Text);           
-            txtTongTien.Text = (Gia * SoLuong).ToString();
-            txtThanhToan.Text += txtTongTien.Text;
         }
        
         private void button1_Click(object sender, EventArgs e)
@@ -98,6 +102,28 @@ namespace WindowsFormsApp1
                 Application.Exit();
             }    
                 
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //int index = dgvSanPham.CurrentCell.RowIndex;
+            //txtMaSP.Text = dgvSanPham.Rows[index].Cells["MaSP"].Value.ToString();
+            //txtTenSP.Text = dgvSanPham.Rows[index].Cells["TenSP"].Value.ToString();
+            //txtGia.Text = dgvSanPham.Rows[index].Cells["Gia"].Value.ToString();
+            //txtDonVi.Text = dgvSanPham.Rows[index].Cells["DonVi"].Value.ToString();
+            //txtSoLuong.Text = dgvSanPham.Rows[index].Cells["SoLuong"].Value.ToString();
+            //txtGhiChu.Text = dgvSanPham.Rows[index].Cells["GhiChu"].Value.ToString();
+        }
+
+        private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvSanPham.CurrentCell.RowIndex;
+            txtMaSP.Text = dgvSanPham.Rows[index].Cells["MaSP"].Value.ToString();
+            txtTenSP.Text = dgvSanPham.Rows[index].Cells["TenSP"].Value.ToString();
+            txtGia.Text = dgvSanPham.Rows[index].Cells["Gia"].Value.ToString();
+            txtDonVi.Text = dgvSanPham.Rows[index].Cells["DonVi"].Value.ToString();
+            txtSoLuong.Text = dgvSanPham.Rows[index].Cells["SoLuong"].Value.ToString();
+            txtGhiChu.Text = dgvSanPham.Rows[index].Cells["GhiChu"].Value.ToString();
         }
     }
 }
