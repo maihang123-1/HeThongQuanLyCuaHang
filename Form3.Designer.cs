@@ -40,8 +40,6 @@
             this.txtThanhToan = new System.Windows.Forms.TextBox();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.ChckChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ClSua = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ClXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btTongTien = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btThemSP = new System.Windows.Forms.Button();
@@ -57,6 +55,8 @@
             this.txtSoLuongBan = new System.Windows.Forms.TextBox();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +99,7 @@
             // btThoat
             // 
             this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btThoat.Location = new System.Drawing.Point(509, 170);
+            this.btThoat.Location = new System.Drawing.Point(611, 170);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(76, 41);
             this.btThoat.TabIndex = 4;
@@ -156,9 +156,7 @@
             // 
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ChckChon,
-            this.ClSua,
-            this.ClXoa});
+            this.ChckChon});
             this.dgvSanPham.Location = new System.Drawing.Point(4, 222);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.Size = new System.Drawing.Size(695, 269);
@@ -174,26 +172,10 @@
             this.ChckChon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ChckChon.Width = 40;
             // 
-            // ClSua
-            // 
-            this.ClSua.HeaderText = "Sửa";
-            this.ClSua.Name = "ClSua";
-            this.ClSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClSua.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ClSua.Width = 40;
-            // 
-            // ClXoa
-            // 
-            this.ClXoa.HeaderText = "Xóa";
-            this.ClXoa.Name = "ClXoa";
-            this.ClXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ClXoa.Width = 40;
-            // 
             // btTongTien
             // 
             this.btTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btTongTien.Location = new System.Drawing.Point(425, 64);
+            this.btTongTien.Location = new System.Drawing.Point(425, 74);
             this.btTongTien.Name = "btTongTien";
             this.btTongTien.Size = new System.Drawing.Size(101, 35);
             this.btTongTien.TabIndex = 18;
@@ -203,7 +185,7 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(532, 72);
+            this.txtTongTien.Location = new System.Drawing.Point(532, 82);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(155, 20);
             this.txtTongTien.TabIndex = 19;
@@ -212,7 +194,7 @@
             // btThemSP
             // 
             this.btThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btThemSP.Location = new System.Drawing.Point(214, 170);
+            this.btThemSP.Location = new System.Drawing.Point(334, 170);
             this.btThemSP.Name = "btThemSP";
             this.btThemSP.Size = new System.Drawing.Size(76, 41);
             this.btThemSP.TabIndex = 21;
@@ -315,7 +297,7 @@
             // btXoa
             // 
             this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btXoa.Location = new System.Drawing.Point(310, 170);
+            this.btXoa.Location = new System.Drawing.Point(425, 170);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(76, 41);
             this.btXoa.TabIndex = 31;
@@ -326,7 +308,7 @@
             // btSua
             // 
             this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btSua.Location = new System.Drawing.Point(409, 170);
+            this.btSua.Location = new System.Drawing.Point(519, 170);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(76, 41);
             this.btSua.TabIndex = 32;
@@ -334,11 +316,35 @@
             this.btSua.UseVisualStyleBackColor = true;
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Location = new System.Drawing.Point(425, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 35);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Tìm kiếm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btClear
+            // 
+            this.btClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btClear.Location = new System.Drawing.Point(550, 17);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(101, 35);
+            this.btClear.TabIndex = 34;
+            this.btClear.Text = "Clear";
+            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 493);
+            this.Controls.Add(this.btClear);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.txtSoLuongBan);
@@ -389,9 +395,6 @@
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btTongTien;
         private System.Windows.Forms.TextBox txtTongTien;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ChckChon;
-        private System.Windows.Forms.DataGridViewButtonColumn ClSua;
-        private System.Windows.Forms.DataGridViewButtonColumn ClXoa;
         private System.Windows.Forms.Button btThemSP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -405,5 +408,8 @@
         private System.Windows.Forms.TextBox txtSoLuongBan;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ChckChon;
+        private System.Windows.Forms.Button btClear;
     }
 }

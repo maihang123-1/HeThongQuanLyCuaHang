@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
             SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
             string sql = "Select TenTaiKhoan From TaiKhoan='" + txtTaiKhoan.Text + "'";
             connnection.Open();
-            string sqlSelectDt = "Update TaiKhoan Set TenTaiKhoan='" + txtTaiKhoan.Text + "',MatKhau='" + txtMatkhaumoi.Text + "'";
+            string sqlSelectDt = "Update TaiKhoan Set TenTaiKhoan='" + txtTaiKhoan.Text + "',MatKhau='" + txtMatkhaumoi.Text + "'Where TenTaiKhoan=='"+txtTaiKhoan.Text;
             if (string.IsNullOrEmpty(txtTaiKhoan.Text) || string.IsNullOrEmpty(txtMatkhaumoi.Text) || string.IsNullOrEmpty(txtXacnhanMk.Text))
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
             else if (txtMatkhaumoi.Text != txtXacnhanMk.Text)
@@ -31,8 +31,9 @@ namespace WindowsFormsApp1
             {
                 
                 SqlCommand cmd = new SqlCommand(sql,connnection);
-                SqlDataReader dt = cmd.ExecuteReader();
-                if (dt.Read() == false)
+                SqlDataReader dt6 = cmd.ExecuteReader();
+               
+                if (dt6.Read() == false)
                 {
                     MessageBox.Show("Tài khoản này không tồn tại", "Thông báo");
                     

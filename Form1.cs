@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult kq= MessageBox.Show("Bạn có muốn reset lại password ??", "Thông báo",MessageBoxButtons.YesNo);
-            if(kq==DialogResult.OK)
+            if(kq==DialogResult.Yes)
             {
                 this.Hide();
                 Form6 n6 = new Form6();
@@ -101,5 +101,7 @@ namespace WindowsFormsApp1
                 Application.Exit();
 
         }
+
+        
     }
 }

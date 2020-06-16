@@ -35,13 +35,15 @@
             this.btTao = new System.Windows.Forms.Button();
             this.btHuy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbTenDangNhap
             // 
             this.lbTenDangNhap.AutoSize = true;
             this.lbTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbTenDangNhap.Location = new System.Drawing.Point(70, 156);
+            this.lbTenDangNhap.Location = new System.Drawing.Point(70, 124);
             this.lbTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenDangNhap.Name = "lbTenDangNhap";
             this.lbTenDangNhap.Size = new System.Drawing.Size(116, 20);
@@ -51,7 +53,7 @@
             // lbMatKhau
             // 
             this.lbMatKhau.AutoSize = true;
-            this.lbMatKhau.Location = new System.Drawing.Point(70, 225);
+            this.lbMatKhau.Location = new System.Drawing.Point(70, 176);
             this.lbMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(75, 20);
@@ -61,7 +63,7 @@
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtTenDangNhap.Location = new System.Drawing.Point(208, 158);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(208, 126);
             this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(222, 20);
@@ -70,7 +72,7 @@
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtMatKhau.Location = new System.Drawing.Point(208, 225);
+            this.txtMatKhau.Location = new System.Drawing.Point(208, 178);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(222, 20);
@@ -109,11 +111,32 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "TẠO TÀI KHOẢN";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 225);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ghi chú";
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtGhiChu.Location = new System.Drawing.Point(208, 227);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(222, 20);
+            this.txtGhiChu.TabIndex = 8;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 412);
+            this.Controls.Add(this.txtGhiChu);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.btTao);
@@ -140,5 +163,7 @@
         private System.Windows.Forms.Button btHuy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtGhiChu;
     }
 }
