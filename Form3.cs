@@ -68,10 +68,13 @@ namespace WindowsFormsApp1
                 int Gia = Int32.Parse(txtGia.Text);
                 int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
                 txtTongTien.Text = (Gia * SoLuongBan).ToString();
+                int a;
+                bool d = Int32.TryParse(txtThanhToan.Text,out a);
+                a += Int32.Parse(txtTongTien.Text);
+                txtThanhToan.Text = (a).ToString();
 
-                //(txtThanhToan.Text)+= Int32.Parse(txtTongTien.Text);
-                (txtThanhToan.Text) += (txtTongTien.Text);
-                Int32.Parse(txtThanhToan.Text);
+                
+
 
 
 
