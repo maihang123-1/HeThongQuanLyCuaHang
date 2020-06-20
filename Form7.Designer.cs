@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgv7 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +63,15 @@
             this.dgv7.TabIndex = 0;
             this.dgv7.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv7_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 45;
+            // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(76, 137);
+            this.btThem.Location = new System.Drawing.Point(100, 137);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 23);
             this.btThem.TabIndex = 7;
@@ -74,7 +81,7 @@
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(181, 137);
+            this.btXoa.Location = new System.Drawing.Point(191, 137);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 23);
             this.btXoa.TabIndex = 8;
@@ -83,7 +90,7 @@
             // 
             // btSua
             // 
-            this.btSua.Location = new System.Drawing.Point(286, 137);
+            this.btSua.Location = new System.Drawing.Point(287, 137);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 23);
             this.btSua.TabIndex = 9;
@@ -197,7 +204,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(392, 137);
+            this.button4.Location = new System.Drawing.Point(515, 137);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(72, 23);
             this.button4.TabIndex = 10;
@@ -207,7 +214,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(498, 137);
+            this.button1.Location = new System.Drawing.Point(392, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 23);
             this.button1.TabIndex = 11;
@@ -215,17 +222,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column1
+            // btTimKiem
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 45;
+            this.btTimKiem.Location = new System.Drawing.Point(12, 137);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btTimKiem.TabIndex = 12;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 450);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtGhiChu);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.Button btTimKiem;
     }
 }

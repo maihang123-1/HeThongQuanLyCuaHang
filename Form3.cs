@@ -70,6 +70,7 @@ namespace WindowsFormsApp1
 
             else
             {
+<<<<<<< HEAD
                 int b;
                 bool o = int.TryParse(txtSoLuongBan.Text, out b);
 
@@ -80,6 +81,18 @@ namespace WindowsFormsApp1
                     int Gia = Int32.Parse(txtGia.Text);
                     int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
                     txtTongTien.Text = (Gia * SoLuongBan).ToString();
+=======
+                int Gia = Int32.Parse(txtGia.Text);
+                int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
+                txtTongTien.Text = (Gia * SoLuongBan).ToString();
+                int a;
+                bool d = Int32.TryParse(txtThanhToan.Text,out a);
+                a += Int32.Parse(txtTongTien.Text);
+                txtThanhToan.Text = (a).ToString();
+
+                
+
+>>>>>>> 1197a3816c843d2339f95c04946d8eed52f8d46e
 
                     int a;
                     // int b = Int32.Parse(txtTongTien.Text);
@@ -129,24 +142,45 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
 
-            connnection.Open();
-            string sqlSearch = "Select * From SanPham Where TenSP =@TenSP or MaSP=@MaSP ";
-            SqlCommand cmd = new SqlCommand(sqlSearch, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
             
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            dgvSanPham.DataSource = dt;
-            connnection.Close();
         }
 
-       
+<<<<<<< HEAD
+=======
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            //txtMaSP.Text = null;
+            //txtTenSP.Text = null;
+            //txtDonVi.Text = null;
+            //txtGhiChu.Text = null;
+            //txtSoLuongBan.Text = null;
+            //txtGia.Text = null;
+            //txtTongTien.Text = null;
+            //txtThanhToan.Text = null;
+        }
+
+>>>>>>> 1197a3816c843d2339f95c04946d8eed52f8d46e
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form7 n7 = new Form7();
+            n7.ShowDialog();
+        }
+<<<<<<< HEAD
+=======
+
+        private void btClear_Click_1(object sender, EventArgs e)
+        {
+            txtMaSP.Text = null;
+            txtTenSP.Text = null;
+            txtDonVi.Text = null;
+            txtGhiChu.Text = null;
+            txtSoLuongBan.Text = null;
+            txtGia.Text = null;
+            txtTongTien.Text = null;
+            txtThanhToan.Text = null;
+            txtSoLuong.Text = null;
+        }
+>>>>>>> 1197a3816c843d2339f95c04946d8eed52f8d46e
     }
 }

@@ -120,5 +120,25 @@ namespace WindowsFormsApp1
             txtGia.Text = null;
             
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            connnection.Open();
+            string sqlSearch = "Select * From SanPham Where TenSP =@TenSP or MaSP=@MaSP ";
+            SqlCommand cmd = new SqlCommand(sqlSearch, connnection);
+            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+            cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
+            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+            cmd.ExecuteNonQuery();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgv7.DataSource = dt;
+            connnection.Close();
+        }
     }
 }
