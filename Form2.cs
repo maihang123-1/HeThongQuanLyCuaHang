@@ -76,6 +76,9 @@ namespace WindowsFormsApp1
                         cmd1.ExecuteNonQuery();
                         MessageBox.Show("Tạo tài khoản thành công");
                         connnection.Close();
+                        Form3 n3 = new Form3();
+                        n3.ShowDialog();
+
                     }
                 }
 

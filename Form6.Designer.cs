@@ -28,111 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btReset = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.lbTaiKhoan = new System.Windows.Forms.Label();
+            this.lbMatKhau = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTentk = new System.Windows.Forms.TextBox();
+            this.txtMK = new System.Windows.Forms.TextBox();
+            this.txtXacNhanMK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMatkhaumoi = new System.Windows.Forms.TextBox();
-            this.txtXacnhanMk = new System.Windows.Forms.TextBox();
-            this.lbMkMoi = new System.Windows.Forms.Label();
-            this.lbXacNhanMk = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.btDoiMk = new System.Windows.Forms.Button();
-            this.btThoatF6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btReset
+            // 
+            this.btReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btReset.Location = new System.Drawing.Point(90, 236);
+            this.btReset.Name = "btReset";
+            this.btReset.Size = new System.Drawing.Size(88, 34);
+            this.btReset.TabIndex = 4;
+            this.btReset.Text = "Reset";
+            this.btReset.UseVisualStyleBackColor = true;
+            this.btReset.Click += new System.EventHandler(this.btReset_Click);
+            // 
+            // btThoat
+            // 
+            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btThoat.Location = new System.Drawing.Point(216, 236);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(88, 34);
+            this.btThoat.TabIndex = 5;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // lbTaiKhoan
+            // 
+            this.lbTaiKhoan.AutoSize = true;
+            this.lbTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbTaiKhoan.Location = new System.Drawing.Point(48, 99);
+            this.lbTaiKhoan.Name = "lbTaiKhoan";
+            this.lbTaiKhoan.Size = new System.Drawing.Size(95, 17);
+            this.lbTaiKhoan.TabIndex = 2;
+            this.lbTaiKhoan.Text = "Tên tài khoản";
+            // 
+            // lbMatKhau
+            // 
+            this.lbMatKhau.AutoSize = true;
+            this.lbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbMatKhau.Location = new System.Drawing.Point(51, 136);
+            this.lbMatKhau.Name = "lbMatKhau";
+            this.lbMatKhau.Size = new System.Drawing.Size(92, 17);
+            this.lbMatKhau.TabIndex = 3;
+            this.lbMatKhau.Text = "Mật khẩu mới";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(13, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Xác nhận mật khẩu";
+            // 
+            // txtTentk
+            // 
+            this.txtTentk.Location = new System.Drawing.Point(158, 96);
+            this.txtTentk.Name = "txtTentk";
+            this.txtTentk.Size = new System.Drawing.Size(146, 20);
+            this.txtTentk.TabIndex = 1;
+            // 
+            // txtMK
+            // 
+            this.txtMK.Location = new System.Drawing.Point(158, 135);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(146, 20);
+            this.txtMK.TabIndex = 2;
+            // 
+            // txtXacNhanMK
+            // 
+            this.txtXacNhanMK.Location = new System.Drawing.Point(158, 174);
+            this.txtXacNhanMK.Name = "txtXacNhanMK";
+            this.txtXacNhanMK.Size = new System.Drawing.Size(146, 20);
+            this.txtXacNhanMK.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 34);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(103, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vui lòng nhập đầy đủ thông tin";
-            // 
-            // txtMatkhaumoi
-            // 
-            this.txtMatkhaumoi.Location = new System.Drawing.Point(139, 126);
-            this.txtMatkhaumoi.Name = "txtMatkhaumoi";
-            this.txtMatkhaumoi.Size = new System.Drawing.Size(133, 20);
-            this.txtMatkhaumoi.TabIndex = 3;
-            // 
-            // txtXacnhanMk
-            // 
-            this.txtXacnhanMk.Location = new System.Drawing.Point(139, 182);
-            this.txtXacnhanMk.Name = "txtXacnhanMk";
-            this.txtXacnhanMk.Size = new System.Drawing.Size(133, 20);
-            this.txtXacnhanMk.TabIndex = 4;
-            // 
-            // lbMkMoi
-            // 
-            this.lbMkMoi.AutoSize = true;
-            this.lbMkMoi.Location = new System.Drawing.Point(12, 133);
-            this.lbMkMoi.Name = "lbMkMoi";
-            this.lbMkMoi.Size = new System.Drawing.Size(71, 13);
-            this.lbMkMoi.TabIndex = 3;
-            this.lbMkMoi.Text = "Mật khẩu mới";
-            // 
-            // lbXacNhanMk
-            // 
-            this.lbXacNhanMk.AutoSize = true;
-            this.lbXacNhanMk.Location = new System.Drawing.Point(12, 185);
-            this.lbXacNhanMk.Name = "lbXacNhanMk";
-            this.lbXacNhanMk.Size = new System.Drawing.Size(113, 13);
-            this.lbXacNhanMk.TabIndex = 4;
-            this.lbXacNhanMk.Text = "Xác nhận lại mật khẩu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tài khoản";
-            // 
-            // txtTaiKhoan
-            // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(139, 80);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(133, 20);
-            this.txtTaiKhoan.TabIndex = 1;
-            // 
-            // btDoiMk
-            // 
-            this.btDoiMk.Location = new System.Drawing.Point(43, 241);
-            this.btDoiMk.Name = "btDoiMk";
-            this.btDoiMk.Size = new System.Drawing.Size(101, 23);
-            this.btDoiMk.TabIndex = 5;
-            this.btDoiMk.Text = "Đổi mật khẩu";
-            this.btDoiMk.UseVisualStyleBackColor = true;
-            this.btDoiMk.Click += new System.EventHandler(this.btDoiMk_Click);
-            // 
-            // btThoatF6
-            // 
-            this.btThoatF6.Location = new System.Drawing.Point(150, 241);
-            this.btThoatF6.Name = "btThoatF6";
-            this.btThoatF6.Size = new System.Drawing.Size(102, 23);
-            this.btThoatF6.TabIndex = 6;
-            this.btThoatF6.Text = "Thoát";
-            this.btThoatF6.UseVisualStyleBackColor = true;
-            this.btThoatF6.Click += new System.EventHandler(this.btThoatF6_Click);
+            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "RESET PASSWORD";
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 288);
-            this.Controls.Add(this.btThoatF6);
-            this.Controls.Add(this.btDoiMk);
-            this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbXacNhanMk);
-            this.Controls.Add(this.lbMkMoi);
-            this.Controls.Add(this.txtXacnhanMk);
-            this.Controls.Add(this.txtMatkhaumoi);
+            this.ClientSize = new System.Drawing.Size(398, 297);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtXacNhanMK);
+            this.Controls.Add(this.txtMK);
+            this.Controls.Add(this.txtTentk);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbMatKhau);
+            this.Controls.Add(this.lbTaiKhoan);
+            this.Controls.Add(this.btThoat);
+            this.Controls.Add(this.btReset);
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ĐỔI MẬT KHẨU";
+            this.Text = "RESET PASSWORD";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,14 +146,14 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btReset;
+        private System.Windows.Forms.Button btThoat;
+        private System.Windows.Forms.Label lbTaiKhoan;
+        private System.Windows.Forms.Label lbMatKhau;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTentk;
+        private System.Windows.Forms.TextBox txtMK;
+        private System.Windows.Forms.TextBox txtXacNhanMK;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbMkMoi;
-        private System.Windows.Forms.Label lbXacNhanMk;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txtMatkhaumoi;
-        public System.Windows.Forms.TextBox txtXacnhanMk;
-        protected internal System.Windows.Forms.TextBox txtTaiKhoan;
-        private System.Windows.Forms.Button btDoiMk;
-        private System.Windows.Forms.Button btThoatF6;
     }
 }
