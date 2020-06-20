@@ -15,7 +15,8 @@ namespace WindowsFormsApp1
     public partial class Form3 : Form
     {
 
-        SqlConnection connnection = new SqlConnection(@"Data Source=MKB\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+        SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+
         SqlDataAdapter da;
 
         public Form3()

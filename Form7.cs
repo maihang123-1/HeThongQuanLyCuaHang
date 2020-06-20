@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form7 : Form
     {
-        SqlConnection connnection = new SqlConnection(@"Data Source=MKB\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+        SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
         SqlDataAdapter da;
 
         public Form7()
@@ -95,33 +95,55 @@ namespace WindowsFormsApp1
         private void btThem_Click_1(object sender, EventArgs e)
         {
             connnection.Open();
+            string sqlSelect = "Select * From SanPham Where MaSP='" + txtMaSP.Text + "'";
+            SqlCommand cmd7 = new SqlCommand(sqlSelect, connnection);
+            SqlDataReader dr = cmd7.ExecuteReader();
+            if ((dr.Read()))
+            {
+                MessageBox.Show("Mã sản phẩm đã tồn tại, vui lòng nhập lại mã sản phẩm", "Thông báo");
+            }
 
-            string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
-            SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm sản phẩm thành công");
-            HienThi();
+            if (string.IsNullOrEmpty(txtMaSP.Text) || string.IsNullOrEmpty(txtTenSP.Text) || string.IsNullOrEmpty(txtGia.Text) || string.IsNullOrEmpty(txtDonVi.Text) || string.IsNullOrEmpty(txtSoLuongNhap.Text))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            else
+            {
+                dr.Close();
+                string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
+                cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+                cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+                cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+                cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+                cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
+                cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm sản phẩm thành công");
+                HienThi();
+
+            }
             connnection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connnection.Open();
             txtMaSP.Text = null;
             txtTenSP.Text = null;
             txtDonVi.Text = null;
             txtGhiChu.Text = null;
             txtSoLuongNhap.Text = null;
             txtGia.Text = null;
+            HienThi();
+            connnection.Close();
             
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btTimKiem_Click_1(object sender, EventArgs e)
         {
             connnection.Open();
             string sqlSearch = "Select * From SanPham Where TenSP =@TenSP or MaSP=@MaSP ";

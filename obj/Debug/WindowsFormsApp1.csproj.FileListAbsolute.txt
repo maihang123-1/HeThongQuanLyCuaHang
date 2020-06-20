@@ -27,3 +27,18 @@ D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
 D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe
 D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.pdb
 D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form7.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ngoc han\Documents\GitHub\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.pdb

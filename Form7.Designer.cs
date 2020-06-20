@@ -230,7 +230,7 @@
             this.btTimKiem.TabIndex = 12;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
-            
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click_1);
             // 
             // Form7
             // 
