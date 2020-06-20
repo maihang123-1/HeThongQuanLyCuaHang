@@ -55,35 +55,9 @@ namespace WindowsFormsApp1
         }
 
 
-        private void Delete()
-        {
-            //string sqlDelete = "Delete SanPham Where ";
-        }
         
-        private void btThemSP_Click(object sender, EventArgs e)
-        {
-            
-            
-                connnection.Open();
-                //txtMaSP.ReadOnly = false;
-                //txtTenSP.ReadOnly = false;
-                //txtGia.ReadOnly = false;
-                //txtSoLuong.ReadOnly = false;
-                //txtDonVi.ReadOnly = false;
-                string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
-                SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
-                cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-                cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-                cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-                cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-                cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
-                cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm sản phẩm thành công");
-                HienThi();
-                connnection.Close();
-            
-        }
+        
+        
 
         private void btTongTien_Click(object sender, EventArgs e)
         {
@@ -117,13 +91,7 @@ namespace WindowsFormsApp1
                 
         }
 
-        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        { 
-            
-           
-            
-            
-        }
+       
 
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -137,39 +105,7 @@ namespace WindowsFormsApp1
             txtGhiChu.Text = dgvSanPham.Rows[index].Cells["GhiChu"].Value.ToString();
         }
 
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            connnection.Open();
-            string sqlDelete = "Delete From SanPham Where MaSP = @MaSP";
-            SqlCommand cmd = new SqlCommand(sqlDelete, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Xóa sản phẩm thành công");
-            HienThi();
-            connnection.Close();
-        }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            connnection.Open();
-            string sqlUpdate = "Update SanPham Set TenSP =@TenSP, Gia=@Gia, DonVi=@DonVi, SoLuong=@SoLuong, GhiChu=@GhiChu Where MaSP=@MaSP ";
-            SqlCommand cmd = new SqlCommand(sqlUpdate, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Cập nhật thông tin sản phẩm thành công");
-            HienThi();
-            connnection.Close();
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -192,11 +128,6 @@ namespace WindowsFormsApp1
             connnection.Close();
         }
 
-        private void btClear_Click(object sender, EventArgs e)
-        {
-            txtTenSP.Text = "";
-            txtMaSP.Text = "";
-            //HienThi();
-        }
+       
     }
 }

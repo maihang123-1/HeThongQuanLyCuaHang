@@ -44,10 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(105, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 24);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "THỐNG KÊ DOANH SỐ";
             // 

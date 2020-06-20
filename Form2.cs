@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             {
                 count++;                
             }
-            if (count < 6)
+            if (count < 6 && count > 0)
                 MessageBox.Show("Mật khẩu tối thiểu 6 ký tự");          
             return count;
 
@@ -64,10 +64,10 @@ namespace WindowsFormsApp1
 
                 else
                 {
-                    if (!dr.Read() && CheckPass() > 6)
+                    if (!dr.Read() && CheckPass() >= 6)
                     {
                         dr.Close();
-                        //string sqlCreateAcc = "Insert Into TaiKhoan Values(@TenDangNhap,@MatKhau, @GhiChu)";
+                       
                         string sqlCreateAcc = "Insert Into TaiKhoan Values('"+txtTenDangNhap.Text+"','"+txtMatKhau.Text+"','"+txtGhiChu.Text+"')";
                         SqlCommand cmd1 = new SqlCommand(sqlCreateAcc, connnection);
                         cmd1.Parameters.AddWithValue("TenTaiKhoan", txtTenDangNhap.Text);
@@ -80,16 +80,7 @@ namespace WindowsFormsApp1
                 }
 
 
-                //if (!dr.Read() && CheckPass()>6)
-                //{
-                //    string sqlCreateAcc = "Insert Into TaiKhoan Values(@TenDangNhap,@MatKhau, @GhiChu)";
-                //    SqlCommand cmd1 = new SqlCommand(sqlCreateAcc, connnection);
-                //    cmd1.Parameters.AddWithValue("TenTaiKhoan", txtTenDangNhap.Text);
-                //    cmd1.Parameters.AddWithValue("MatKhau", txtMatKhau.Text);
-                //    cmd1.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-                //    cmd1.ExecuteNonQuery();
-                //    MessageBox.Show("Tạo tài khoản thành công");
-                //}
+                
                 
 
             }
@@ -98,13 +89,10 @@ namespace WindowsFormsApp1
 
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
+        }
     }
 }
 

@@ -37,12 +37,14 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btLogIn
             // 
             this.btLogIn.BackColor = System.Drawing.SystemColors.Control;
-            this.btLogIn.Location = new System.Drawing.Point(172, 311);
+            this.btLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btLogIn.Location = new System.Drawing.Point(146, 231);
             this.btLogIn.Name = "btLogIn";
             this.btLogIn.Size = new System.Drawing.Size(100, 37);
             this.btLogIn.TabIndex = 3;
@@ -53,7 +55,8 @@
             // btExit
             // 
             this.btExit.BackColor = System.Drawing.SystemColors.Control;
-            this.btExit.Location = new System.Drawing.Point(293, 311);
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btExit.Location = new System.Drawing.Point(267, 231);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(103, 37);
             this.btExit.TabIndex = 4;
@@ -66,7 +69,7 @@
             this.chckShow.AutoSize = true;
             this.chckShow.Checked = true;
             this.chckShow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chckShow.Location = new System.Drawing.Point(384, 205);
+            this.chckShow.Location = new System.Drawing.Point(379, 171);
             this.chckShow.Name = "chckShow";
             this.chckShow.Size = new System.Drawing.Size(15, 14);
             this.chckShow.TabIndex = 0;
@@ -77,33 +80,33 @@
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbUsername.Location = new System.Drawing.Point(52, 125);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(116, 20);
+            this.lbUsername.Size = new System.Drawing.Size(105, 17);
             this.lbUsername.TabIndex = 3;
             this.lbUsername.Text = "Tên đăng nhập";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(52, 201);
+            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbPassword.Location = new System.Drawing.Point(81, 165);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(75, 20);
+            this.lbPassword.Size = new System.Drawing.Size(66, 17);
             this.lbPassword.TabIndex = 4;
             this.lbPassword.Text = "Mật khẩu";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(185, 125);
+            this.txtUsername.Location = new System.Drawing.Point(172, 125);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(190, 20);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(185, 199);
+            this.txtPassword.Location = new System.Drawing.Point(172, 165);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(190, 20);
             this.txtPassword.TabIndex = 2;
@@ -112,7 +115,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(180, 405);
+            this.linkLabel1.Location = new System.Drawing.Point(154, 312);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(92, 13);
             this.linkLabel1.TabIndex = 7;
@@ -123,7 +126,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(290, 405);
+            this.linkLabel2.Location = new System.Drawing.Point(282, 312);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(80, 13);
             this.linkLabel2.TabIndex = 8;
@@ -131,12 +134,23 @@
             this.linkLabel2.Text = "Quên mật khẩu";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(189, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "ĐĂNG NHẬP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(513, 450);
+            this.ClientSize = new System.Drawing.Size(490, 361);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtPassword);
@@ -165,6 +179,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         public System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label1;
     }
 }
 
