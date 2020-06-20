@@ -53,7 +53,6 @@
             this.lbSoLuongBan = new System.Windows.Forms.Label();
             this.txtSoLuongBan = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.btClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -320,31 +319,12 @@
             this.button2.Text = "Quản lý sản phẩm";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-<<<<<<< HEAD
-=======
-            // 
-            // btClear
-            // 
-            this.btClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btClear.Location = new System.Drawing.Point(350, 171);
-            this.btClear.Name = "btClear";
-            this.btClear.Size = new System.Drawing.Size(76, 41);
-            this.btClear.TabIndex = 32;
-            this.btClear.Text = "Clear";
-            this.btClear.UseVisualStyleBackColor = true;
-            this.btClear.Click += new System.EventHandler(this.btClear_Click_1);
->>>>>>> 1197a3816c843d2339f95c04946d8eed52f8d46e
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1066, 758);
-=======
-            this.ClientSize = new System.Drawing.Size(711, 493);
-            this.Controls.Add(this.btClear);
->>>>>>> 1197a3816c843d2339f95c04946d8eed52f8d46e
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtSoLuongBan);
             this.Controls.Add(this.lbSoLuongBan);
@@ -406,6 +386,5 @@
         private System.Windows.Forms.TextBox txtSoLuongBan;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ChckChon;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btClear;
     }
 }
