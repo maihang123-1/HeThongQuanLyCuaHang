@@ -71,6 +71,10 @@ namespace WindowsFormsApp1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Reset password thành công");
                 connnection.Close();
+                this.Hide();
+                Form3 n3 = new Form3();
+                n3.ShowDialog();
+                
             }
         }
     }

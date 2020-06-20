@@ -53,6 +53,7 @@
             this.lbSoLuongBan = new System.Windows.Forms.Label();
             this.txtSoLuongBan = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.btClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +162,6 @@
             this.dgvSanPham.Size = new System.Drawing.Size(695, 269);
             this.dgvSanPham.TabIndex = 17;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
-           
             // 
             // ChckChon
             // 
@@ -295,12 +295,25 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Quản lý sản phẩm";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btClear
+            // 
+            this.btClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btClear.Location = new System.Drawing.Point(350, 171);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(76, 41);
+            this.btClear.TabIndex = 32;
+            this.btClear.Text = "Clear";
+            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click_1);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 493);
+            this.Controls.Add(this.btClear);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtSoLuongBan);
             this.Controls.Add(this.lbSoLuongBan);
@@ -361,5 +374,6 @@
         private System.Windows.Forms.TextBox txtSoLuongBan;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ChckChon;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btClear;
     }
 }

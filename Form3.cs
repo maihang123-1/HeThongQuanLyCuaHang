@@ -116,6 +116,36 @@ namespace WindowsFormsApp1
             
         }
 
-       
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            //txtMaSP.Text = null;
+            //txtTenSP.Text = null;
+            //txtDonVi.Text = null;
+            //txtGhiChu.Text = null;
+            //txtSoLuongBan.Text = null;
+            //txtGia.Text = null;
+            //txtTongTien.Text = null;
+            //txtThanhToan.Text = null;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form7 n7 = new Form7();
+            n7.ShowDialog();
+        }
+
+        private void btClear_Click_1(object sender, EventArgs e)
+        {
+            txtMaSP.Text = null;
+            txtTenSP.Text = null;
+            txtDonVi.Text = null;
+            txtGhiChu.Text = null;
+            txtSoLuongBan.Text = null;
+            txtGia.Text = null;
+            txtTongTien.Text = null;
+            txtThanhToan.Text = null;
+            txtSoLuong.Text = null;
+        }
     }
 }
