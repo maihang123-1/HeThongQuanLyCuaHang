@@ -94,8 +94,10 @@ namespace WindowsFormsApp1
                 int Gia = Int32.Parse(txtGia.Text);
                 int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
                 txtTongTien.Text = (Gia * SoLuongBan).ToString();
-                txtThanhToan.Text += (txtTongTien.Text);
 
+                //(txtThanhToan.Text)+= Int32.Parse(txtTongTien.Text);
+                (txtThanhToan.Text) += (txtTongTien.Text);
+                Int32.Parse(txtThanhToan.Text);
 
 
 
