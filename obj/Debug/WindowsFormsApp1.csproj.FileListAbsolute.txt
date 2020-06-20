@@ -12,3 +12,18 @@ C:\Users\ngoc han\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Windo
 C:\Users\ngoc han\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
 C:\Users\ngoc han\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
 C:\Users\ngoc han\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form5.resources
+D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe.config
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.exe
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.pdb
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form4.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form5.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form7.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe
+D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.pdb
+D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form6.resources

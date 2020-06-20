@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Form3 : Form
     {
 
-        SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+        SqlConnection connnection = new SqlConnection(@"Data Source=MKB\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
         SqlDataAdapter da;
 
         public Form3()
@@ -55,24 +55,30 @@ namespace WindowsFormsApp1
         }
 
 
-        
-        
-        
 
+
+
+        
+        
         private void btTongTien_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtMaSP.Text))
+                MessageBox.Show("Vui lòng chọn sản phẩm trước");
+            else
             if (string.IsNullOrEmpty(txtSoLuongBan.Text))
                 MessageBox.Show("Vui lòng nhập số lượng bán");
+            
             else
             {
                 int Gia = Int32.Parse(txtGia.Text);
                 int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
                 txtTongTien.Text = (Gia * SoLuongBan).ToString();
 
-                //(txtThanhToan.Text)+= Int32.Parse(txtTongTien.Text);
-                (txtThanhToan.Text) += (txtTongTien.Text);
-                Int32.Parse(txtThanhToan.Text);
-
+                int a;
+               // int b = Int32.Parse(txtTongTien.Text);
+                bool d = Int32.TryParse(txtThanhToan.Text, out a);
+                   a += Int32.Parse(txtTongTien.Text);
+                txtThanhToan.Text = (a).ToString();            
 
 
             }

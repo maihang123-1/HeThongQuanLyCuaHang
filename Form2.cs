@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void btTao_Click(object sender, EventArgs e)
         {
-            SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+            SqlConnection connnection = new SqlConnection(@"Data Source=MKB\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
             connnection.Open();
             if ((string.IsNullOrEmpty(txtTenDangNhap.Text)) || (string.IsNullOrEmpty(txtMatKhau.Text)))
             {

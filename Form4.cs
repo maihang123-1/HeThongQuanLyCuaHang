@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             
         }
-        SqlConnection connnection = new SqlConnection(@"Data Source=LAPTOP-EFEOHQTE\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
+        SqlConnection connnection = new SqlConnection(@"Data Source=MKB\SQLEXPRESS;Initial Catalog=QuanLyCuaHang1;Integrated Security=True");
         //SqlDataAdapter da;
         private void button2_Click(object sender, EventArgs e)
         {
