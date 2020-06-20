@@ -67,21 +67,28 @@ namespace WindowsFormsApp1
             else
             if (string.IsNullOrEmpty(txtSoLuongBan.Text))
                 MessageBox.Show("Vui lòng nhập số lượng bán");
-            
+
             else
             {
-                int Gia = Int32.Parse(txtGia.Text);
-                int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
-                txtTongTien.Text = (Gia * SoLuongBan).ToString();
+                int b;
+                bool o = int.TryParse(txtSoLuongBan.Text, out b);
 
-                int a;
-               // int b = Int32.Parse(txtTongTien.Text);
-                bool d = Int32.TryParse(txtThanhToan.Text, out a);
-                   a += Int32.Parse(txtTongTien.Text);
-                txtThanhToan.Text = (a).ToString();            
+                if (!o)
+                    MessageBox.Show("Vui lòng nhập số lượng là một số");
+                else
+                {
+                    int Gia = Int32.Parse(txtGia.Text);
+                    int SoLuongBan = Int32.Parse(txtSoLuongBan.Text);
+                    txtTongTien.Text = (Gia * SoLuongBan).ToString();
+
+                    int a;
+                    // int b = Int32.Parse(txtTongTien.Text);
+                    bool d = Int32.TryParse(txtThanhToan.Text, out a);
+                    a += Int32.Parse(txtTongTien.Text);
+                    txtThanhToan.Text = (a).ToString();
 
 
-            }
+                } }
 
 
         }
