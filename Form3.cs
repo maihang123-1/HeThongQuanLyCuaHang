@@ -113,22 +113,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
 
-            connnection.Open();
-            string sqlSearch = "Select * From SanPham Where TenSP =@TenSP or MaSP=@MaSP ";
-            SqlCommand cmd = new SqlCommand(sqlSearch, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuong.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
             
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            dgvSanPham.DataSource = dt;
-            connnection.Close();
         }
 
        
