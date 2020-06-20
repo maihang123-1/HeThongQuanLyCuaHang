@@ -85,7 +85,7 @@
             this.txtSoLuong.Location = new System.Drawing.Point(108, 170);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(77, 20);
-            this.txtSoLuong.TabIndex = 3;
+            this.txtSoLuong.TabIndex = 7;
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtGia
@@ -93,7 +93,7 @@
             this.txtGia.Location = new System.Drawing.Point(73, 130);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(112, 20);
-            this.txtGia.TabIndex = 2;
+            this.txtGia.TabIndex = 5;
             this.txtGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btThoat
@@ -227,7 +227,7 @@
             this.txtTenSP.Location = new System.Drawing.Point(73, 91);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(112, 20);
-            this.txtTenSP.TabIndex = 24;
+            this.txtTenSP.TabIndex = 3;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMaSP
@@ -235,7 +235,7 @@
             this.txtMaSP.Location = new System.Drawing.Point(72, 54);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(112, 20);
-            this.txtMaSP.TabIndex = 25;
+            this.txtMaSP.TabIndex = 1;
             this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtDonVi
@@ -243,7 +243,7 @@
             this.txtDonVi.Location = new System.Drawing.Point(274, 54);
             this.txtDonVi.Name = "txtDonVi";
             this.txtDonVi.Size = new System.Drawing.Size(112, 20);
-            this.txtDonVi.TabIndex = 26;
+            this.txtDonVi.TabIndex = 2;
             this.txtDonVi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
@@ -272,7 +272,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(112, 25);
-            this.txtGhiChu.TabIndex = 29;
+            this.txtGhiChu.TabIndex = 6;
             this.txtGhiChu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbSoLuongBan
@@ -291,7 +291,7 @@
             this.txtSoLuongBan.Multiline = true;
             this.txtSoLuongBan.Name = "txtSoLuongBan";
             this.txtSoLuongBan.Size = new System.Drawing.Size(76, 25);
-            this.txtSoLuongBan.TabIndex = 1;
+            this.txtSoLuongBan.TabIndex = 4;
             this.txtSoLuongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btXoa
