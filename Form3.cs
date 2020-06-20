@@ -95,12 +95,18 @@ namespace WindowsFormsApp1
        
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult kq3 = MessageBox.Show("Giá trị của đơn hàng này là " + txtThanhToan.Text + "", "Thông báo", MessageBoxButtons.YesNo);
-            if (kq3 == DialogResult.Yes)
+            if (string.IsNullOrEmpty(txtThanhToan.Text))
+                MessageBox.Show("Vui lòng nhập thông tin đơn hàng");
+
+            else
             {
-                MessageBox.Show("Hóa đơn đã được thanh toán thành công");
-                Application.Exit();
-            }    
+                DialogResult kq3 = MessageBox.Show("Giá trị của đơn hàng này là " + txtThanhToan.Text + "", "Thông báo", MessageBoxButtons.YesNo);
+                if (kq3 == DialogResult.Yes)
+                {
+                    MessageBox.Show("Hóa đơn đã được thanh toán thành công");
+                    Application.Exit();
+                }
+            }
                 
         }
 
