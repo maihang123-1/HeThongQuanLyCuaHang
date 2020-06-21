@@ -27,3 +27,6 @@ D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
 D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.exe
 D:\HeThongQuanLyCuaHang\bin\Debug\WindowsFormsApp1.pdb
 D:\HeThongQuanLyCuaHang\obj\Debug\WindowsFormsApp1.Form6.resources
+D:\HeThongQuanLyCuaHang\bin\Debug\nunit.framework.dll
+D:\HeThongQuanLyCuaHang\bin\Debug\nunit.framework.pdb
+D:\HeThongQuanLyCuaHang\bin\Debug\nunit.framework.xml

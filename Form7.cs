@@ -112,16 +112,20 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connnection.Open();
             txtMaSP.Text = null;
             txtTenSP.Text = null;
             txtDonVi.Text = null;
             txtGhiChu.Text = null;
             txtSoLuongNhap.Text = null;
             txtGia.Text = null;
-            
+            HienThi();
+            connnection.Close();
         }
 
-        private void btTimKiem_Click(object sender, EventArgs e)
+        
+
+        private void btTimKiem_Click_1(object sender, EventArgs e)
         {
             connnection.Open();
             string sqlSearch = "Select * From SanPham Where TenSP =@TenSP or MaSP=@MaSP ";
