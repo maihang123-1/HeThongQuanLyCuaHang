@@ -75,18 +75,45 @@ namespace WindowsFormsApp1
         private void btSua_Click(object sender, EventArgs e)
         {
             connnection.Open();
-           
-            string sqlUpdate = "Update SanPham Set TenSP =@TenSP, Gia=@Gia, DonVi=@DonVi, SoLuong=@SoLuong, GhiChu=@GhiChu Where MaSP=@MaSP ";
-            SqlCommand cmd = new SqlCommand(sqlUpdate, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Cập nhật thông tin sản phẩm thành công");
-            HienThi();
+            string sqlSelect = "Select * From SanPham Where MaSP='" + txtMaSP.Text + "'";
+            SqlCommand cmd7 = new SqlCommand(sqlSelect, connnection);
+            SqlDataReader dr = cmd7.ExecuteReader();
+            if (!(dr.Read()))
+            {
+                MessageBox.Show("Mã sản phẩm không tồn tại, vui lòng nhập lại mã sản phẩm", "Thông báo");
+            }
+            else
+            if (string.IsNullOrEmpty(txtMaSP.Text) || string.IsNullOrEmpty(txtTenSP.Text) || string.IsNullOrEmpty(txtGia.Text) || string.IsNullOrEmpty(txtDonVi.Text) || string.IsNullOrEmpty(txtSoLuongNhap.Text))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            else
+            {
+                dr.Close();
+                int b;
+                float c;
+                bool o = int.TryParse(txtSoLuongNhap.Text, out b);
+                bool l = float.TryParse(txtGia.Text, out c);
+
+                if (!o)
+                    MessageBox.Show("Vui lòng nhập số lượng là một số");
+                else if(!l)
+                    MessageBox.Show("Vui lòng nhập giá là một số");
+
+                else
+                {
+                    string sqlUpdate = "Update SanPham Set TenSP =@TenSP, Gia=@Gia, DonVi=@DonVi, SoLuong=@SoLuong, GhiChu=@GhiChu Where MaSP=@MaSP ";
+                    SqlCommand cmd = new SqlCommand(sqlUpdate, connnection);
+                    cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+                    cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+                    cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+                    cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+                    cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
+                    cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật thông tin sản phẩm thành công");
+                    HienThi();
+                }
+                
+            }
             connnection.Close();
         }
 
@@ -95,18 +122,44 @@ namespace WindowsFormsApp1
         private void btThem_Click_1(object sender, EventArgs e)
         {
             connnection.Open();
+            string sqlSelect = "Select * From SanPham Where MaSP='" + txtMaSP.Text + "'";
+            SqlCommand cmd7 = new SqlCommand(sqlSelect, connnection);
+            SqlDataReader dr = cmd7.ExecuteReader();
+            if ((dr.Read()))
+            {
+                MessageBox.Show("Mã sản phẩm đã tồn tại, vui lòng nhập lại mã sản phẩm", "Thông báo");
+            }
+            else
+            if (string.IsNullOrEmpty(txtMaSP.Text) || string.IsNullOrEmpty(txtTenSP.Text) || string.IsNullOrEmpty(txtGia.Text) || string.IsNullOrEmpty(txtDonVi.Text) || string.IsNullOrEmpty(txtSoLuongNhap.Text))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            else
+            {
+                dr.Close();
+                int b;
+                float c;
+                bool o = int.TryParse(txtSoLuongNhap.Text, out b);
+                bool l = float.TryParse(txtGia.Text, out c);
 
-            string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
-            SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
-            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
-            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
-            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
-            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
-            cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
-            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm sản phẩm thành công");
-            HienThi();
+                if (!o)
+                    MessageBox.Show("Vui lòng nhập số lượng là một số");
+                else if (!l)
+                    MessageBox.Show("Vui lòng nhập giá là một số");
+
+                else
+                {
+                    string sqlInsert = "Insert Into SanPham Values(@MaSP,@TenSP,@Gia,@DonVi,@SoLuong,@GhiChu)";
+                    SqlCommand cmd = new SqlCommand(sqlInsert, connnection);
+                    cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+                    cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+                    cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+                    cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+                    cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
+                    cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Thêm sản phẩm thành công");
+                    HienThi();
+                }
+            }
             connnection.Close();
         }
 
@@ -121,9 +174,12 @@ namespace WindowsFormsApp1
             txtGia.Text = null;
             HienThi();
             connnection.Close();
+
         }
 
         
+
+      
 
         private void btTimKiem_Click_1(object sender, EventArgs e)
         {
@@ -142,6 +198,23 @@ namespace WindowsFormsApp1
             DataTable dt = new DataTable();
             dt.Load(dr);
             dgv7.DataSource = dt;
+            connnection.Close();
+        }
+
+        private void btXoa_Click_1(object sender, EventArgs e)
+        {
+            connnection.Open();
+            string sqlDelete = "Delete From SanPham Where MaSP = @MaSP";
+            SqlCommand cmd = new SqlCommand(sqlDelete, connnection);
+            cmd.Parameters.AddWithValue("MaSP", txtMaSP.Text);
+            cmd.Parameters.AddWithValue("TenSP", txtTenSP.Text);
+            cmd.Parameters.AddWithValue("Gia", txtGia.Text);
+            cmd.Parameters.AddWithValue("DonVi", txtDonVi.Text);
+            cmd.Parameters.AddWithValue("SoLuong", txtSoLuongNhap.Text);
+            cmd.Parameters.AddWithValue("GhiChu", txtGhiChu.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Xóa sản phẩm thành công");
+            HienThi();
             connnection.Close();
         }
     }
